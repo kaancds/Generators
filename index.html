@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 BEAMING</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Chakra Petch', sans-serif;
+            background: linear-gradient(to right, #000000, #0a0a1a);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .background {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: horizontalStars linear infinite;
+        }
+
+        @keyframes horizontalStars {
+            from {
+                transform: translateX(-10vw) rotate(90deg);
+                opacity: 0.2;
+            }
+            to {
+                transform: translateX(110vw) rotate(90deg);
+                opacity: 0.6;
+            }
+        }
+
+        .container {
+            position: relative;
+            background-color: rgba(10, 10, 30, 0.8);
+            border: 2px solid rgba(100, 50, 255, 0.5);
+            border-radius: 20px;
+            padding: 40px;
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            z-index: 2;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 0 30px rgba(100, 50, 255, 0.2);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .discord-btn {
+            background: linear-gradient(to right, #5865F2, #404EED);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 15px rgba(88, 101, 242, 0.4);
+        }
+
+        .discord-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .main-section {
+            background-color: rgba(20, 20, 50, 0.6);
+            border: 2px solid rgba(138, 79, 255, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .platform-support {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            color: #8a4fff;
+        }
+
+        .generator-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            flex-grow: 1;
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .generator-btn {
+            background: linear-gradient(to right, #ff6b6b, #ff4757);
+            color: white;
+        }
+
+        .refresher-btn {
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: white;
+        }
+
+        .btn:hover {
+            transform: scale(1.1) rotate(3deg);
+            box-shadow: 0 0 15px rgba(255,255,255,0.3);
+        }
+
+        .tutorial-section {
+            background-color: rgba(20, 20, 50, 0.6);
+            border: 2px solid rgba(138, 79, 255, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .tutorial-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            border: 2px solid rgba(138, 79, 255, 0.3);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .tutorial-btn:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        .title {
+            font-size: 3rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #8a4fff;
+            text-shadow: 0 0 10px #8a4fff, 0 0 20px #8a4fff, 0 0 30px #8a4fff;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #8a4fff, 0 0 20px #8a4fff, 0 0 30px #8a4fff;
+            }
+            to {
+                text-shadow: 0 0 20px #8a4fff, 0 0 40px #8a4fff, 0 0 60px #8a4fff;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background" id="background"></div>
+
+    <div class="container">
+        <div class="title">
+            2025 BEAMING
+        </div>
+
+        <button class="discord-btn">Join Discord</button>
+
+        <div class="main-section">
+            <div class="platform-support">
+                <span>TikTok - supported</span>
+                <span>Chrome - supported</span>
+            </div>
+            <div class="generator-buttons">
+                <button class="btn generator-btn">⚡ Generator</button>
+                <button class="btn refresher-btn">↻ Refresher</button>
+            </div>
+            <p style="margin-top: 15px; font-size: 0.8rem; color: #8a4fff;">
+                If the sites are down or flagged be patient if you need help join discord.gg/limited
+            </p>
+        </div>
+
+        <div class="tutorial-section">
+            <h3 style="margin-bottom: 15px; color: #8a4fff;">Beaming Tutorial</h3>
+            <button id="tutorialBtn" class="tutorial-btn">Open Tutorial</button>
+        </div>
+    </div>
+
+    <script>
+        const background = document.getElementById('background');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.top = `${Math.random() * 100}vh`;
+            star.style.animationDuration = `${Math.random() * 10 + 8}s`;
+            star.style.animationDelay = `${Math.random() * 5}s`;
+            star.style.width = `${Math.random() * 2 + 1}px`;
+            star.style.height = `${Math.random() * 15 + 5}px`;
+            background.appendChild(star);
+        }
+
+        // Tutorial Button Logic
+        const tutorialBtn = document.getElementById('tutorialBtn');
+        tutorialBtn.addEventListener('click', () => {
+            window.open('https://www.youtube.com/watch?v=CkQMClQXg58', '_blank');
+        });
+
+        // Discord Button
+        const discordBtn = document.querySelector('.discord-btn');
+        discordBtn.addEventListener('click', () => {
+            window.open('https://discord.gg/limited', '_blank');
+        });
+    </script>
+</body>
+</html>
